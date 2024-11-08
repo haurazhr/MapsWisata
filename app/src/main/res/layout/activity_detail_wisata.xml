@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradasi"
+    tools:context=".DetailWisata">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detail Wisata"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/league_spartan"
+            android:layout_marginTop="30dp"
+            />
+        <ImageView
+            android:id="@+id/imgwisata"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/jamgadang"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtdeskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="akjdafdfkjadshkfuasdhfad"
+            android:textColor="@color/black"
+            android:fontFamily="@font/league_spartan"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btngas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lihat map"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#45BAB1"/>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="-33.796923"
+            map:cameraTargetLng="150.922433"
+            map:cameraTilt="30"
+            map:cameraZoom="13"
+            map:mapType="normal"
+            map:uiCompass="false"
+            map:uiRotateGestures="true"
+            map:uiScrollGestures="false"
+            map:uiTiltGestures="true"
+            map:uiZoomControls="false"
+            map:uiZoomGestures="true"
+            android:layout_marginRight="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="30sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
